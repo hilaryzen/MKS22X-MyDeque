@@ -19,6 +19,11 @@ public class MyDeque<E> {
     end = 0;
   }
 
+  //Returns number of elements in the array
+  public int size() {
+    return size;
+  }
+
   public String toString() {
     String ans = "{";
     for (int i = 0; i < size; i++) {
