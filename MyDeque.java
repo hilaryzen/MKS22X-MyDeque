@@ -9,4 +9,11 @@ public class MyDeque<E> {
     start = 0;
     end = 9;
   }
+
+  public MyDeque(int initialCapacity) {
+    data = (E[])new Object[initialCapacity];
+    size = 0;
+    start = 0;
+    end = data.length - 1;
+  }
 }
