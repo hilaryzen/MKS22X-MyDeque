@@ -1,5 +1,5 @@
 public class MyDeque<E> {
-  private E[] data;
+  public E[] data;
   private int size, start, end;
 
   @SuppressWarnings("unchecked")
@@ -30,5 +30,13 @@ public class MyDeque<E> {
       ans = ans + data[start + i] + " ";
     }
     return ans + "}";
+  }
+
+  public void addLast(E element) {
+    if (size > 0) {
+      end++;
+    }
+    data[end] = element;
+    size++;
   }
 }
