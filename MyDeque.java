@@ -100,4 +100,16 @@ public class MyDeque<E> {
     data[end] = element;
     size++;
   }
+
+  //Removes and returns first element in deque
+  public E removeFirst() {
+    E first = data[start];
+    data[start] = null;
+    start++;
+    if (start == data.length) {
+      start = 0;
+    }
+    size--;
+    return first;
+  }
 }
