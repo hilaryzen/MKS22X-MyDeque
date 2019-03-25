@@ -63,11 +63,11 @@ public class MyDeque<E> {
 
   public void addFirst(E element) {
     if (size > 0) {
-      if (size == data.length) {
+      if (size == data.length) { //If array is full
         resize(1);
         start--;
       } else if (start == 0) {
-        start = data.length - 1;
+        start = data.length - 1; //Loops around to the end
       } else {
         start--;
       }
@@ -78,7 +78,14 @@ public class MyDeque<E> {
 
   public void addLast(E element) {
     if (size > 0) {
-      end++;
+      if (size == data.length) { //If array is full, resize
+        resize(0);
+        end++;
+      } else if (end == data.length - 1) {
+        end = 0; //Loops around to the front
+      } else {
+        end++; //Moves end forward
+      }
     }
     data[end] = element;
     size++;
