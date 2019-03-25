@@ -17,8 +17,13 @@ public class Driver {
     System.out.println("First element: " + data.getFirst());
     System.out.println("Last element: " + data.getLast());
 
+    data.addLast("C");
+    data.addLast("D");
+    data.addLast("E");
+    System.out.println(data);
+
     System.out.println(" ");
-    data.addFirst("C");
+    data.addFirst("F");
     System.out.println(data);
     System.out.println("Size: " + data.size());
     System.out.println("First element: " + data.getFirst());
