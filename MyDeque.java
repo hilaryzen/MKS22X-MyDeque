@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class MyDeque<E> {
   public E[] data;
   private int size, start, end;
@@ -30,6 +32,13 @@ public class MyDeque<E> {
       ans = ans + data[start + i] + " ";
     }
     return ans + "}";
+  }
+
+  public E getFirst() {
+    if (size == 0) {
+      throw new NoSuchElementException();
+    }
+    return data[start];
   }
 
   public void addLast(E element) {
