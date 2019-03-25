@@ -15,5 +15,6 @@ public class Driver {
     System.out.println(data.toString());
     System.out.println("Size: " + data.size());
     System.out.println("First element: " + data.getFirst());
+    System.out.println("Last element: " + data.getLast());
   }
 }

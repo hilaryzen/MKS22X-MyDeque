@@ -34,11 +34,20 @@ public class MyDeque<E> {
     return ans + "}";
   }
 
+  //Returns first element
   public E getFirst() {
     if (size == 0) {
       throw new NoSuchElementException();
     }
     return data[start];
+  }
+
+  //Returns last element
+  public E getLast() {
+    if (size == 0) {
+      throw new NoSuchElementException();
+    }
+    return data[end];
   }
 
   public void addLast(E element) {
