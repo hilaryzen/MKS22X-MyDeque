@@ -8,5 +8,10 @@ public class Driver {
     data.addLast("Hi");
     System.out.println(data.toString());
     System.out.println("Size: " + data.size());
+
+    System.out.println(" ");
+    data.addLast("Bye");
+    System.out.println(data.toString());
+    System.out.println("Size: " + data.size());
   }
 }
