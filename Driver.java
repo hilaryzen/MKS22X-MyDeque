@@ -40,5 +40,9 @@ public class Driver {
     System.out.println(" ");
     System.out.println("Removing first element: " + data.removeFirst());
     System.out.println(data);
+
+    System.out.println(" ");
+    System.out.println("Removing last element: " + data.removeLast());
+    System.out.println(data);
   }
 }

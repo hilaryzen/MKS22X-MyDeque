@@ -103,6 +103,9 @@ public class MyDeque<E> {
 
   //Removes and returns first element in deque
   public E removeFirst() {
+    if (size == 0) {
+      throw new NoSuchElementException();
+    }
     E first = data[start];
     data[start] = null;
     start++;
@@ -111,5 +114,20 @@ public class MyDeque<E> {
     }
     size--;
     return first;
+  }
+
+  //Removes and returns last element in deque
+  public E removeLast() {
+    if (size == 0) {
+      throw new NoSuchElementException();
+    }
+    E last = data[end];
+    data[end] = null;
+    end--;
+    if (end == -1) {
+      end = data.length - 1;
+    }
+    size--;
+    return last;
   }
 }
