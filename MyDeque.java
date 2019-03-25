@@ -61,7 +61,12 @@ public class MyDeque<E> {
     end = start + size - 1;
   }
 
+  //Adds element to the beginning of the deque
   public void addFirst(E element) {
+    //Throws exception if element being added is null
+    if (element == null) {
+      throw new NullPointerException();
+    }
     if (size > 0) {
       if (size == data.length) { //If array is full
         resize(1);
@@ -76,7 +81,12 @@ public class MyDeque<E> {
     size++;
   }
 
+  //Adds element to the end of the deque
   public void addLast(E element) {
+    //Throws exception if element being added is null
+    if (element == null) {
+      throw new NullPointerException();
+    }
     if (size > 0) {
       if (size == data.length) { //If array is full, resize
         resize(0);

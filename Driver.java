@@ -23,6 +23,7 @@ public class Driver {
     System.out.println(data);
 
     System.out.println(" ");
+    //data.addFirst(null);
     data.addFirst("F");
     System.out.println(data);
     System.out.println("Size: " + data.size());
