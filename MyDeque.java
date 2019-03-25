@@ -50,6 +50,14 @@ public class MyDeque<E> {
     return data[end];
   }
 
+  public void addFirst(E element) {
+    if (size > 0) {
+      start = (start - 1) % data.length;
+    }
+    data[start] = element;
+    size++;
+  }
+
   public void addLast(E element) {
     if (size > 0) {
       end++;
