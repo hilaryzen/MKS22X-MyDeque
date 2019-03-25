@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class MyDeque<E> {
-  public E[] data;
+  private E[] data;
   private int size, start, end;
 
   @SuppressWarnings("unchecked")
@@ -48,6 +48,17 @@ public class MyDeque<E> {
       throw new NoSuchElementException();
     }
     return data[end];
+  }
+
+  //Doubles size of data and copies over values
+  public void resize(int begin) {
+    E[] copy = (E[])new Object[data.length * 2];
+    for (int i = 0; i < size; i++) {
+      copy[begin + i] = data[(start + i) % data.length];
+    }
+    data = copy;
+    start = begin;
+    end = start + size - 1;
   }
 
   public void addFirst(E element) {
