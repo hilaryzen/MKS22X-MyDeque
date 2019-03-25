@@ -51,7 +51,7 @@ public class MyDeque<E> {
   }
 
   //Doubles size of data and copies over values
-  public void resize(int begin) {
+  private void resize(int begin) {
     E[] copy = (E[])new Object[data.length * 2];
     for (int i = 0; i < size; i++) {
       copy[begin + i] = data[(start + i) % data.length];
@@ -63,12 +63,11 @@ public class MyDeque<E> {
 
   public void addFirst(E element) {
     if (size > 0) {
-      if (start == 0) {
-        if (end == data.length - 1) { //If array is full
-          //resize
-        } else {
-          start = data.length - 1; //Start loops back to the end
-        }
+      if (size == data.length) {
+        resize(1);
+        start--;
+      } else if (start == 0) {
+        start = data.length - 1;
       } else {
         start--;
       }

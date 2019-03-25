@@ -23,9 +23,12 @@ public class Driver {
     System.out.println("Size: " + data.size());
     System.out.println("First element: " + data.getFirst());
 
+    /*
+    //Testing resize
     System.out.println(" ");
     data.resize(2);
     System.out.println(data);
     System.out.println("Last element: " + data.getLast());
+    */
   }
 }
