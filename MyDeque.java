@@ -29,7 +29,7 @@ public class MyDeque<E> {
   public String toString() {
     String ans = "{";
     for (int i = 0; i < size; i++) {
-      ans = ans + data[start + i] + " ";
+      ans = ans + data[(start + i) % data.length] + " ";
     }
     return ans + "}";
   }
@@ -52,7 +52,15 @@ public class MyDeque<E> {
 
   public void addFirst(E element) {
     if (size > 0) {
-      start = (start - 1) % data.length;
+      if (start == 0) {
+        if (end == data.length - 1) { //If array is full
+          //resize
+        } else {
+          start = data.length - 1; //Start loops back to the end
+        }
+      } else {
+        start--;
+      }
     }
     data[start] = element;
     size++;
