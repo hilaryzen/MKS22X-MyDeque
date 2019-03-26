@@ -4,9 +4,16 @@ public class Calculator {
   */
   public static double eval(String s){
     String[] args = s.split(" ");
+    MyDeque<Integer> values = new MyDeque<Integer>();
+
     for (int i = 0; i < args.length; i++) {
-      System.out.println(args[i]);
+      try {
+        Integer n = Integer.parseInt(args[i]);
+      } catch (NumberFormatException e) {
+        
+      }
     }
+
     return 0.0;
   }
 }
