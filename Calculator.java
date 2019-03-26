@@ -8,9 +8,9 @@ public class Calculator {
 
     for (int i = 0; i < args.length; i++) {
       try {
-        Integer n = Integer.parseInt(args[i]);
+        values.addLast(Integer.parseInt(args[i]));
       } catch (NumberFormatException e) {
-        
+
       }
     }
 
