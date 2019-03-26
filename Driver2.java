@@ -111,7 +111,7 @@ public class Driver2 {
 				comp.addLast(i);
 				if (!edge_check(comp, deque)) {
 					out.add(message(old+".addLast("+i+")", gist_string(comp), gist_string(deque)));
-					System.out.println("Edge check");
+					System.out.println("addLast edge check 1");
 					break;
 				}
 				if (comp.size() != deque.size()) {
@@ -203,6 +203,7 @@ public class Driver2 {
 				comp.addLast(i);
 				if (!edge_check(comp, deque)) {
 					out.add(message(old+".addLast("+i+")", gist_string(comp), gist_string(deque)));
+					System.out.println("addLast edge check 2");
 					break;
 				}
 				if (comp.size() != deque.size()) {
@@ -240,6 +241,7 @@ public class Driver2 {
 				comp.addLast(i);
 				if (!edge_check(comp, deque)) {
 					out.add(message(old+".addLast("+i+")", gist_string(comp), gist_string(deque)));
+					System.out.println("addLast edge check 3");
 					break;
 				}
 				if (comp.size() != deque.size()) {
