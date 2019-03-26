@@ -11,7 +11,11 @@ public class Calculator {
         values.addLast(Double.parseDouble(args[i]));
         //System.out.println(values);
       } catch (NumberFormatException e) {
-
+        if (args[i].equals("+")) {
+          add();
+        } else if (args[i].equals("-")) {
+          subtract();
+        }
       }
     }
 
@@ -24,5 +28,13 @@ public class Calculator {
     Double j = values.getLast();
     values.removeLast();
     values.addLast(i + j);
+  }
+
+  public static void subtract() {
+    Double i = values.getLast();
+    values.removeLast();
+    Double j = values.getLast();
+    values.removeLast();
+    values.addLast(j - i);
   }
 }
