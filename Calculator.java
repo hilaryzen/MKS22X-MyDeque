@@ -12,17 +12,19 @@ public class Calculator {
         //System.out.println(values);
       } catch (NumberFormatException e) {
         if (args[i].equals("+")) {
-          add();
+          add(values);
         } else if (args[i].equals("-")) {
-          subtract();
+          subtract(values);
         }
       }
+      System.out.println(values);
     }
+    System.out.println(values);
 
     return 0.0;
   }
 
-  public static void add() {
+  public static void add(MyDeque<Double> values) {
     Double i = values.getLast();
     values.removeLast();
     Double j = values.getLast();
@@ -30,7 +32,7 @@ public class Calculator {
     values.addLast(i + j);
   }
 
-  public static void subtract() {
+  public static void subtract(MyDeque<Double> values) {
     Double i = values.getLast();
     values.removeLast();
     Double j = values.getLast();
