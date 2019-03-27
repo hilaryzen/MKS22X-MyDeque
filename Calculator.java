@@ -17,6 +17,8 @@ public class Calculator {
           subtract(values);
         } else if (args[i].equals("*")) {
           multiply(values);
+        } else if (args[i].equals("/")) {
+          divide(values);
         }
       }
       //System.out.println(values);
@@ -50,5 +52,13 @@ public class Calculator {
     Double j = values.getLast();
     values.removeLast();
     values.addLast(i * j);
+  }
+
+  public static void divide(MyDeque<Double> values) {
+    Double i = values.getLast();
+    values.removeLast();
+    Double j = values.getLast();
+    values.removeLast();
+    values.addLast(j / i);
   }
 }
