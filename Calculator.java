@@ -19,6 +19,8 @@ public class Calculator {
           multiply(values);
         } else if (args[i].equals("/")) {
           divide(values);
+        } else if (args[i].equals("%")) {
+          mod(values);
         }
       }
       //System.out.println(values);
@@ -60,5 +62,13 @@ public class Calculator {
     Double j = values.getLast();
     values.removeLast();
     values.addLast(j / i);
+  }
+
+  public static void mod(MyDeque<Double> values) {
+    Double i = values.getLast();
+    values.removeLast();
+    Double j = values.getLast();
+    values.removeLast();
+    values.addLast(j % i);
   }
 }
