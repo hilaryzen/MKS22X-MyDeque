@@ -107,8 +107,12 @@ public class MyDeque<E> {
       throw new NoSuchElementException();
     }
     E first = data[start];
-    data[start] = null;
-    start++;
+    if (size == 1) {
+      data[start] = null;
+    } else {
+      data[start] = null;
+      start++;
+    }
     if (start == data.length) {
       start = 0;
     }
@@ -122,8 +126,12 @@ public class MyDeque<E> {
       throw new NoSuchElementException();
     }
     E last = data[end];
-    data[end] = null;
-    end--;
+    if (size == 1) {
+      data[end] = null;
+    } else {
+      data[end] = null;
+      end--;
+    }
     if (end == -1) {
       end = data.length - 1;
     }
