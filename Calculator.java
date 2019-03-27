@@ -17,11 +17,11 @@ public class Calculator {
           subtract(values);
         }
       }
-      System.out.println(values);
+      //System.out.println(values);
     }
-    System.out.println(values);
+    //System.out.println(values);
 
-    return 0.0;
+    return values.getLast();
   }
 
   public static void add(MyDeque<Double> values) {
@@ -35,8 +35,10 @@ public class Calculator {
   public static void subtract(MyDeque<Double> values) {
     Double i = values.getLast();
     values.removeLast();
+    //System.out.println(values);
     Double j = values.getLast();
     values.removeLast();
+    //System.out.println(values);
     values.addLast(j - i);
   }
 }
