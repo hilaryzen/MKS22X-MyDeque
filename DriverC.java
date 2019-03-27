@@ -1,9 +1,8 @@
 public class DriverC {
   public static void main(String[] args) {
-    System.out.println(Calculator.eval("10 2 +"));
-
-    System.out.println(" ");
-
-    System.out.println(Calculator.eval("-18 2 +"));
+    String[] equations = {"10 2 +", "-18 2 +"};
+    for (int i = 0; i < equations.length; i++) {
+      System.out.println(equations[i] + ": " + Calculator.eval(equations[i]));
+    }
   }
 }
