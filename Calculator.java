@@ -15,6 +15,8 @@ public class Calculator {
           add(values);
         } else if (args[i].equals("-")) {
           subtract(values);
+        } else if (args[i].equals("*")) {
+          multiply(values);
         }
       }
       //System.out.println(values);
