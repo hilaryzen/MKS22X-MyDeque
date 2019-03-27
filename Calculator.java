@@ -41,4 +41,12 @@ public class Calculator {
     //System.out.println(values);
     values.addLast(j - i);
   }
+
+  public static void multiply(MyDeque<Double> values) {
+    Double i = values.getLast();
+    values.removeLast();
+    Double j = values.getLast();
+    values.removeLast();
+    values.addLast(i * j);
+  }
 }
